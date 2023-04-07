@@ -1,0 +1,198 @@
+
+nav ul{
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    background-color: #03153b;
+    position: fixed;
+}
+
+nav ul li{ /* center */
+    /* Set display, margin, padding, font-size, background-color */
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-align: center;
+    padding: 15px 20px;
+    margin: auto;
+}
+
+nav a{
+    /* Set text decoration*/
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a.skip{
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: #03153b;
+    color: white;
+    opacity: 0;
+}
+
+
+a.skip:focus{
+    left: 10%;
+    top: 10%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+a:visited{
+    /* Set color */
+    color: rgb(139, 243, 243);
+}
+
+nav a.current{ /* wavy line down a bit */
+    /* Set text decoration, transformation, and underline properties */
+    text-decoration: underline wavy #fffcfc;
+    text-transform: uppercase;
+    text-underline-position: under;
+    text-underline-offset: 8px;
+}
+
+body{
+    font-family: 'Roboto', 'Anton', "Times New Roman", Arial;
+}
+
+h1{
+    /*Set font and font size*/
+    font-family: 'Roboto', 'Anton', "Times New Roman", Arial;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0a4faa;
+    height: 200px;
+    padding: 100px 50px;
+ }
+
+body main div{
+    line-height: 2;
+    border: 2px solid #ffffff;
+    margin: auto;
+    
+}
+
+.small_title{
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+}
+
+main img{
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: auto;
+    border: 1px solid #ffffff;
+}
+
+main img:hover{
+    opacity: 0.7;
+}
+
+div.Intro{
+    width: 100%;
+    background-color: #0a4faa;
+    color: #ffffff;
+    text-align: center;
+}
+
+div.disclaimer{
+    text-align: center;
+    color: #ffffff;
+    background-color: #0a4faa;
+    font-size:x-large;
+}
+
+#html-spinner{
+    width:40px;
+    height:40px;
+    border:4px solid #fcd779;
+    border-top:4px solid white;
+    border-radius:50%;
+}
+
+#html-spinner{
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1.2s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 1.2s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 1.2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+@-webkit-keyframes rotate {
+      from {-webkit-transform: rotate(0deg);}
+      to {-webkit-transform: rotate(360deg);}
+  }
+
+@-moz-keyframes rotate {
+      from {-moz-transform: rotate(0deg);}
+      to {-moz-transform: rotate(360deg);}
+  }
+
+@keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+
+footer{
+    line-height: 2;
+    background-color: #ffffff;
+    font-size: large;
+    text-align: center;
+}
+
+footer .fas{
+    font-size: 20px
+}
+
+div.Container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.Container div{
+    flex: 100%;
+    font-size: x-large;
+}
+
+@media all and (min-width: 768px){
+    div.Container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-between;
+    }
+
+    div.Container div{
+        display: inline-grid;
+        text-align: center;
+        font-size: large;
+        object-fit: cover;
+    }
+
+    div.Container img{
+        transition: transform 1s ease-in-out;
+    }
+
+    div.Container img:hover {
+        transform: scaleX(-1);
+    }
+}

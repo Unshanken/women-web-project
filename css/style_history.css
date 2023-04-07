@@ -1,0 +1,130 @@
+nav ul{
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    background-color: #03153b;
+    position: fixed;
+}
+
+nav ul li{ /* center */
+    /* Set display, margin, padding, font-size, background-color */
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-align: center;
+    padding: 15px 20px;
+    margin: auto;
+}
+
+nav a{
+    /* Set text decoration*/
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a.skip{
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: #03153b;
+    color: white;
+    opacity: 0;
+}
+
+a.skip:focus{
+    left: 10%;
+    top: 10%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+a:visited{
+    /* Set color */
+    color: rgb(139, 243, 243);
+}
+
+nav a.current{ /* wavy line down a bit */
+    /* Set text decoration, transformation, and underline properties */
+    text-decoration: underline wavy #ffffff;
+    text-transform: uppercase;
+    text-underline-position: under;
+    text-underline-offset: 8px;
+}
+
+body{
+    font-family: 'Roboto', 'Anton', "Times New Roman", Arial;
+}
+
+h1{
+    /*Set font and font size*/
+    font-family: 'Roboto', 'Anton', "Times New Roman", Arial;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0a4faa;
+    height: 200px;
+    padding: 100px 50px;
+ }
+
+.grid{
+    /*Set width, margin, border properties, background color, and grid properties */
+    width: 80%;
+    margin: 50px auto 50px auto;
+    display: grid;
+    grid-template-rows:repeat(18, 1fr);
+    row-gap: 15px;
+    justify-content: space-between;
+    background-color:#0a4faa;
+    color: #ffffff;
+}
+
+
+.grid div.subgrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid #ffffff;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 15px;
+}
+
+.grid div.subgrid div{
+    display: inline-grid;
+    border-right: 2px solid #ffffff;
+}
+
+
+.grid img{
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: auto;
+}
+
+main img.background{
+    width: 100%;
+    max-height: 335px;
+    margin: auto;
+    display: block;
+    padding: auto;
+    border: 1px solid #ffffff;
+}
+
+.grid img:hover{
+    opacity: 0.7;
+}
+
+
+
+footer{
+    line-height: 2;
+    background-color: #ffffff;
+    font-size: large;
+    text-align: center;
+}
+
+.grid h2{
+    font-weight: bold;
+    font-size: x-large;
+}
